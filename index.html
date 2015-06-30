@@ -1,68 +1,57 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Betfair-php by danieledangeli</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
+    <title>Betfair-php by cmdconfig</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Betfair-php</h1>
-        <p class="header">Betfair php library</p>
+    <section class="page-header">
+      <h1 class="project-name">Betfair-php</h1>
+      <h2 class="project-tagline">Betfair php library</h2>
+      <a href="https://github.com/cmdconfig/betfair-php" class="btn">View on GitHub</a>
+      <a href="https://github.com/cmdconfig/betfair-php/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/cmdconfig/betfair-php/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/danieledangeli/betfair-php/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/danieledangeli/betfair-php/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/danieledangeli/betfair-php">View On GitHub</a></li>
-        </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/danieledangeli">danieledangeli</a></p>
-
-
-      </header>
-      <section>
-        <h1>
-<a name="betfair-php" class="anchor" href="#betfair-php"><span class="octicon octicon-link"></span></a>betfair-php</h1>
+    <section class="main-content">
+      <h1>
+<a id="betfair-php" class="anchor" href="#betfair-php" aria-hidden="true"><span class="octicon octicon-link"></span></a>betfair-php</h1>
 
 <p>This PHP 5.4+ library helps you to interact with the Betfair API via PHP.</p>
 
 <h2>
-<a name="men%C3%B9" class="anchor" href="#men%C3%B9"><span class="octicon octicon-link"></span></a>Menù</h2>
+<a id="menù" class="anchor" href="#men%C3%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menù</h2>
 
 <ul>
 <li><a href="README.md">Main</a></li>
 <li><a href="BIGVIEW.md">The big view</a></li>
 <li><a href="PERSONALIZE.md">How to personalize the library</a></li>
 <li><a href="CONTRIBUTE.md">How to contribute</a></li>
-</ul><h1>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h1>
+</ul>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h1>
 
 <p>This library can be found on <a href="https://packagist.org/packages">Packagist</a>.
 The recommended way to install this is through <a href="http://getcomposer.org">composer</a>.</p>
 
 <p>Run these commands to install composer, the library and its dependencies:</p>
 
-<div class="highlight highlight-bash"><pre><span class="nv">$ </span>curl -sS https://getcomposer.org/installer <span class="p">|</span> php
-<span class="nv">$ </span>php composer.phar require erlangb/betfair-php:@dev-master
-</pre></div>
+<div class="highlight highlight-bash"><pre>$ curl -sS https://getcomposer.org/installer <span class="pl-k">|</span> php
+$ php composer.phar require erlangb/betfair-php:@dev-master</pre></div>
 
 <p>Or edit <code>composer.json</code> and add:</p>
 
-<div class="highlight highlight-json"><pre><span class="p">{</span>
-    <span class="nt">"require"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">"erlangb/betfair"</span><span class="p">:</span> <span class="s2">"@dev-master"</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>require<span class="pl-pds">"</span></span>: {
+        <span class="pl-s"><span class="pl-pds">"</span>cmdconfig/betfair<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>@dev-master<span class="pl-pds">"</span></span>
+    }
+}</pre></div>
 
 <p><strong>Protip:</strong> you should browse the
 <a href="https://packagist.org/packages/erlangb/betfair"><code>erlangb/betfair</code></a>
@@ -70,34 +59,31 @@ page to choose a stable version to use, instead of dev-master</p>
 
 <p>And install dependencies:</p>
 
-<div class="highlight highlight-bash"><pre><span class="nv">$ </span>curl -sS https://getcomposer.org/installer <span class="p">|</span> php
-<span class="nv">$ </span>php composer.phar install
-</pre></div>
+<div class="highlight highlight-bash"><pre>$ curl -sS https://getcomposer.org/installer <span class="pl-k">|</span> php
+$ php composer.phar install</pre></div>
 
 <p>Now you can add the autoloader, and you will have access to the library:</p>
 
-<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
-</pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>vendor/autoload.php<span class="pl-pds">'</span></span>;</span></pre></div>
 
 <p>If you don't use neither <strong>Composer</strong> nor a <em>ClassLoader</em> in your application, just require the provided autoloader:</p>
 
-<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
-
-<span class="k">require_once</span> <span class="s1">'src/autoload.php'</span><span class="p">;</span>
-</pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">require_once</span> <span class="pl-s"><span class="pl-pds">'</span>src/autoload.php<span class="pl-pds">'</span></span>;</span></pre></div>
 
 <h1>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
 
 <h2>
-<a name="obtain-an-app_key" class="anchor" href="#obtain-an-app_key"><span class="octicon octicon-link"></span></a>Obtain an APP_KEY</h2>
+<a id="obtain-an-app_key" class="anchor" href="#obtain-an-app_key" aria-hidden="true"><span class="octicon octicon-link"></span></a>Obtain an APP_KEY</h2>
 
 <p>To use this library you have to obtain an APP_KEY from <a href="https://developer.betfair.com/">Betfair</a></p>
 
 <h2>
-<a name="the-simple-usage" class="anchor" href="#the-simple-usage"><span class="octicon octicon-link"></span></a>The simple usage</h2>
+<a id="the-simple-usage" class="anchor" href="#the-simple-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>The simple usage</h2>
 
 <p><strong>Protip:</strong>  With the <strong>simple usage</strong> you can have access to the already existing helpers. Please feel free to contribute to this library by adding more helpers.</p>
 
@@ -107,50 +93,46 @@ The <strong>Betfair</strong> object has to built up with a <em>BetfairClient</em
 <p>We need to build these objects for the library to be customizable, if needed.
 In the <strong>how to customize</strong> section you will be explained how to do it.</p>
 
-<div class="highlight highlight-php"><pre><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Betfair\Credential</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Betfair\Dependency\BetfairContainer</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Betfair\Betfair</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Betfair\Client\BetfairClient</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Betfair\Client\JsonRpcClient</span><span class="p">;</span>
-<span class="k">use</span> <span class="nx">Betfair\Adapter\ArrayAdapter</span><span class="p">;</span>
-
-<span class="nv">$credential</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Credential</span><span class="p">(</span><span class="s2">"APP_KEY"</span><span class="p">,</span> <span class="s2">"BETFAIR_USERNAME"</span><span class="p">,</span> <span class="s1">'BETFAIR_PWD'</span><span class="p">);</span>
-<span class="nv">$container</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BetfairContainer</span><span class="p">();</span>
-<span class="nv">$betfairClient</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BetfairClient</span><span class="p">(</span><span class="nv">$credential</span><span class="p">,</span> <span class="k">new</span> <span class="nx">JsonRpcClient</span><span class="p">());</span>
-
-<span class="nv">$betfair</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Betfair</span><span class="p">(</span><span class="nv">$betfairClient</span><span class="p">,</span> <span class="nv">$container</span><span class="p">,</span> <span class="k">new</span> <span class="nx">ArrayAdapter</span><span class="p">());</span>
-</pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Betfair\Credential</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Betfair\Dependency\BetfairContainer</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Betfair\Betfair</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Betfair\Client\BetfairClient</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Betfair\Client\JsonRpcClient</span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Betfair\Adapter\ArrayAdapter</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$credential</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Credential</span>(<span class="pl-s"><span class="pl-pds">"</span>APP_KEY<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>BETFAIR_USERNAME<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">'</span>BETFAIR_PWD<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-smi">$container</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">BetfairContainer</span>();</span>
+<span class="pl-s1"><span class="pl-smi">$betfairClient</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">BetfairClient</span>(<span class="pl-smi">$credential</span>, <span class="pl-k">new</span> <span class="pl-c1">JsonRpcClient</span>());</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$betfair</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Betfair</span>(<span class="pl-smi">$betfairClient</span>, <span class="pl-smi">$container</span>, <span class="pl-k">new</span> <span class="pl-c1">ArrayAdapter</span>());</span></pre></div>
 
 <p>With the <strong>Betfair</strong> object you can access to the API model to execute some query.
 For example, considering the Betfair <strong>Event</strong> API, you can access to the relative object model by typing:</p>
 
-<div class="highlight highlight-php"><pre><span class="nv">$betfairEvent</span> <span class="o">=</span> <span class="nv">$betfair</span><span class="o">-&gt;</span><span class="na">getBetfairEvent</span><span class="p">();</span>
-</pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$betfairEvent</span> <span class="pl-k">=</span> <span class="pl-smi">$betfair</span><span class="pl-k">-&gt;</span>getBetfairEvent();</span></pre></div>
 
 <p>Following an helper to access the list of events API by typing:</p>
 
-<div class="highlight highlight-php"><pre><span class="nv">$result</span> <span class="o">=</span> <span class="nv">$betfairEvent</span><span class="o">-&gt;</span><span class="na">getAllEventFilteredByEventTypeIds</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-</pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$result</span> <span class="pl-k">=</span> <span class="pl-smi">$betfairEvent</span><span class="pl-k">-&gt;</span>getAllEventFilteredByEventTypeIds(<span class="pl-c1">array</span>(<span class="pl-c1">1</span>));</span></pre></div>
 
 <p>The result object  is a list of betfair events with event type = 1 (Soccer)</p>
 
 <h2>
-<a name="the-custom-usage" class="anchor" href="#the-custom-usage"><span class="octicon octicon-link"></span></a>The custom usage</h2>
+<a id="the-custom-usage" class="anchor" href="#the-custom-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>The custom usage</h2>
 
 <p>With the simple usage you can use the already existing query helper. 
 If you want to run a more specific API query, that is not present on the helpers, you can use a custom query  by using the <strong>GenericBetfair</strong> object.</p>
 
-<div class="highlight highlight-php"><pre><span class="nv">$generic</span> <span class="o">=</span> <span class="nv">$betfair</span><span class="o">-&gt;</span><span class="na">getBetfairGeneric</span><span class="p">();</span>
-<span class="nv">$filter</span> <span class="o">=</span> <span class="nv">$betfair</span><span class="o">-&gt;</span><span class="na">getContainer</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'betfair.market.filter.factory'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
-<span class="nv">$filter</span><span class="o">-&gt;</span><span class="na">setEventTypeIds</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
-<span class="nv">$to</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\DateTime</span><span class="p">(</span><span class="s1">'now'</span><span class="p">);</span>
-<span class="nv">$from</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\DateTime</span><span class="p">(</span><span class="s1">'now + 3 days'</span><span class="p">);</span>
-<span class="nv">$filter</span><span class="o">-&gt;</span><span class="na">setMarketStartTime</span><span class="p">(</span><span class="k">new</span> <span class="nx">\Betfair\Model\TimeRange</span><span class="p">(</span><span class="nv">$to</span><span class="p">,</span> <span class="nv">$from</span><span class="p">));</span>
-<span class="nv">$param</span> <span class="o">=</span> <span class="nv">$betfair</span><span class="o">-&gt;</span><span class="na">getContainer</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">'betfair.param.filter.factory'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="nv">$filter</span><span class="p">);</span>
-<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$generic</span><span class="o">-&gt;</span><span class="na">executeCustomQuery</span><span class="p">(</span><span class="nv">$param</span><span class="p">,</span> <span class="s1">'listEvents'</span><span class="p">);</span> <span class="c1">// or $generic-&gt;executeCustomQuery($param, Event::METHOD);  </span>
-</pre></div>
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-smi">$generic</span> <span class="pl-k">=</span> <span class="pl-smi">$betfair</span><span class="pl-k">-&gt;</span>getBetfairGeneric();</span>
+<span class="pl-s1"><span class="pl-smi">$filter</span> <span class="pl-k">=</span> <span class="pl-smi">$betfair</span><span class="pl-k">-&gt;</span>getContainer()<span class="pl-k">-&gt;</span>get(<span class="pl-s"><span class="pl-pds">'</span>betfair.market.filter.factory<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>create();</span>
+<span class="pl-s1"><span class="pl-smi">$filter</span><span class="pl-k">-&gt;</span>setEventTypeIds(<span class="pl-c1">array</span>(<span class="pl-c1">1</span>));</span>
+<span class="pl-s1"><span class="pl-smi">$to</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\DateTime</span>(<span class="pl-s"><span class="pl-pds">'</span>now<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-smi">$from</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">\DateTime</span>(<span class="pl-s"><span class="pl-pds">'</span>now + 3 days<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-smi">$filter</span><span class="pl-k">-&gt;</span>setMarketStartTime(<span class="pl-k">new</span> <span class="pl-c1">\Betfair\Model\</span><span class="pl-c1">TimeRange</span>(<span class="pl-smi">$to</span>, <span class="pl-smi">$from</span>));</span>
+<span class="pl-s1"><span class="pl-smi">$param</span> <span class="pl-k">=</span> <span class="pl-smi">$betfair</span><span class="pl-k">-&gt;</span>getContainer()<span class="pl-k">-&gt;</span>get(<span class="pl-s"><span class="pl-pds">'</span>betfair.param.filter.factory<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>create(<span class="pl-smi">$filter</span>);</span>
+<span class="pl-s1"><span class="pl-smi">$result</span> <span class="pl-k">=</span> <span class="pl-smi">$generic</span><span class="pl-k">-&gt;</span>executeCustomQuery(<span class="pl-smi">$param</span>, <span class="pl-s"><span class="pl-pds">'</span>listEvents<span class="pl-pds">'</span></span>); <span class="pl-c">// or $generic-&gt;executeCustomQuery($param, Event::METHOD);  </span></span></pre></div>
 
 <p>This snippet is similar to the simple usage one with a little difference in the filter object, where we have added a constraint that filters the events into a specific time range.</p>
 
@@ -160,27 +142,33 @@ If you want to run a more specific API query, that is not present on the helpers
 <li>  <em>MarketFilter</em> </li>
 <li>  <em>Param</em>
 </li>
-</ul><p>By using the simple container, we can access to the factories MarketFactory and ParamFactory. 
+</ul>
+
+<p>By using the simple container, we can access to the factories MarketFactory and ParamFactory. 
 This factory creates a Param and a MarketFilter object. With this two objects we can built a custom Filter and a custom Param and passing it to the <strong>executeCustomQuery</strong> method.</p>
 
 <h1>
-<a name="how-to-contribute" class="anchor" href="#how-to-contribute"><span class="octicon octicon-link"></span></a>How to contribute</h1>
+<a id="how-to-contribute" class="anchor" href="#how-to-contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to contribute</h1>
 
 <p>I'm very glad to be helped to maintain and extend this library. 
 Please read the <a href="PERSONALIZE.md">how to personalize the library</a> section in order to understand how the library is built and how contribute on it</p>
 
 <h2>
-<a name="reporting-issues" class="anchor" href="#reporting-issues"><span class="octicon octicon-link"></span></a>Reporting Issues</h2>
+<a id="reporting-issues" class="anchor" href="#reporting-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reporting Issues</h2>
 
 <p>We would love to hear your feedback. Report issues using the <a href="https://github.com/danieledangeli/betfair-php/issues">Github
 Issue Tracker</a> or email me at
 <a href="mailto:dangeli88.daniele@gmail.com">dangeli88.daniele@gmail.com</a>.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/cmdconfig/betfair-php">Betfair-php</a> is maintained by <a href="https://github.com/cmdconfig">cmdconfig</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
+    </section>
+
+  
   </body>
 </html>
+
